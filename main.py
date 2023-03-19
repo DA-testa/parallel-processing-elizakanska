@@ -8,7 +8,7 @@ def parallel_processing(n, m, data):
     thread = list(range(n))
     for job_indx, job_t in enumerate (data):
         next_thrd = min(thread, key=lambda i:next_t[i])
-        output.append((next_t,next_t[next_thrd]))
+        output.append((next_thrd, next_t[next_thrd]))
         next_t[next_thrd] +=job_t
         
     return output
